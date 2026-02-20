@@ -1,4 +1,104 @@
 {
+  "049edd2ad19a6bc9": {
+    "c": [
+      {
+        "c": {
+          "d": {
+            "b": {
+              "many": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " de productos"
+                ],
+                "i": 4,
+                "t": "C4"
+              },
+              "other": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " de productos"
+                ],
+                "i": 4,
+                "t": "C4"
+              },
+              "plural": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " de productos"
+                ],
+                "i": 4,
+                "t": "C4"
+              },
+              "singular": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " producto"
+                ],
+                "i": 4,
+                "t": "C4"
+              }
+            },
+            "t": "p"
+          },
+          "i": 3,
+          "t": "Plural"
+        },
+        "i": 2,
+        "t": "p"
+      },
+      {
+        "c": [
+          {
+            "i": 5,
+            "k": "_gt_n_5",
+            "v": "n"
+          },
+          " unidades en stock"
+        ],
+        "i": 4,
+        "t": "p"
+      },
+      {
+        "c": [
+          "Valor: ",
+          {
+            "i": 7,
+            "k": "_gt_cost_7",
+            "v": "c"
+          }
+        ],
+        "i": 6,
+        "t": "p"
+      }
+    ],
+    "i": 1,
+    "t": "div"
+  },
+  "04f066692f0cdc7e": {
+    "c": {
+      "c": "Materiales necesarios",
+      "i": 2,
+      "t": "p"
+    },
+    "i": 1,
+    "t": "div"
+  },
   "11aaa87d615f2da8": [
     {
       "c": "Agotado",
@@ -68,14 +168,109 @@
       "t": "p"
     }
   ],
+  "183887ca9639536f": {
+    "c": {
+      "d": {
+        "b": {
+          "many": {
+            "c": [
+              "Produce ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unidades"
+            ],
+            "i": 3,
+            "t": "C3"
+          },
+          "other": {
+            "c": [
+              "Produce ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unidades"
+            ],
+            "i": 3,
+            "t": "C3"
+          },
+          "plural": {
+            "c": [
+              "Produce ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unidades"
+            ],
+            "i": 3,
+            "t": "C3"
+          },
+          "singular": {
+            "c": [
+              "Produce ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unidad"
+            ],
+            "i": 3,
+            "t": "C3"
+          }
+        },
+        "t": "p"
+      },
+      "i": 2,
+      "t": "Plural"
+    },
+    "i": 1,
+    "t": "p"
+  },
   "1ef8ae8b394c2133": {
     "c": "Agotado",
     "i": 1,
     "t": "span"
   },
+  "337a857a08109018": {
+    "c": {
+      "d": {
+        "b": {
+          "can": {
+            "c": [
+              "Puede fabricar hasta ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              }
+            ],
+            "i": 3,
+            "t": "span"
+          },
+          "cannot": {
+            "c": "No se puede fabricar",
+            "i": 3,
+            "t": "span"
+          }
+        },
+        "t": "b"
+      },
+      "i": 2,
+      "t": "Branch"
+    },
+    "i": 1,
+    "t": "p"
+  },
   "4c280d48821b9916": [
     {
-      "c": "Unidades Totales",
+      "c": "Unidades totales",
       "i": 1,
       "t": "p"
     },
@@ -122,7 +317,12 @@
     "i": 1,
     "t": "div"
   },
-  "6a7e8f86ca6ff79a": "Seguimiento de inventario | General Translation",
+  "6a7e8f86ca6ff79a": "Control de inventario | General Translation",
+  "6b03d4284ec2bca7": {
+    "c": "Disponible",
+    "i": 1,
+    "t": "span"
+  },
   "7662c4f44f72aac4": [
     {
       "c": "Producto",
@@ -145,7 +345,7 @@
       "t": "th"
     },
     {
-      "c": "Última reposición",
+      "c": "Último reabastecimiento",
       "i": 5,
       "t": "th"
     },
@@ -155,8 +355,22 @@
       "t": "th"
     }
   ],
+  "777aa12497719083": {
+    "c": {
+      "c": "Inventario por categoría",
+      "i": 2,
+      "t": "h3"
+    },
+    "i": 1,
+    "t": "div"
+  },
   "8f7406f6b4f65663": {
     "c": "Poco stock",
+    "i": 1,
+    "t": "span"
+  },
+  "a2f5131662099cad": {
+    "c": "Stock Insuficiente",
     "i": 1,
     "t": "span"
   },
@@ -164,6 +378,22 @@
     "c": "Esta es una aplicación de ejemplo creada con General Translation para demostrar funciones de internacionalización, incluyendo formato de números, divisas y fechas según la configuración regional.",
     "i": 1,
     "t": "p"
+  },
+  "b5aeeb7617c517e0": {
+    "c": [
+      {
+        "c": "Vista de elaboración",
+        "i": 2,
+        "t": "h2"
+      },
+      {
+        "c": "Recetas que pueden ensamblarse con el inventario actual. La disponibilidad se calcula a partir de los niveles de stock en todas las categorías.",
+        "i": 3,
+        "t": "p"
+      }
+    ],
+    "i": 1,
+    "t": "div"
   },
   "b5dec3213547ddeb": [
     {
@@ -239,5 +469,36 @@
     "i": 1,
     "t": "span"
   },
-  "db509e67965fe2e4": "Panel de gestión de inventario que muestra la internacionalización con General Translation."
+  "cb974a4a428230f6": [
+    {
+      "c": [
+        {
+          "i": 2,
+          "k": "_gt_n_2",
+          "v": "n"
+        },
+        "x ",
+        {
+          "i": 3,
+          "k": "_gt_value_3",
+          "v": "v"
+        }
+      ],
+      "i": 1,
+      "t": "span"
+    },
+    {
+      "c": [
+        {
+          "i": 5,
+          "k": "_gt_n_5",
+          "v": "n"
+        },
+        " disponible(s)"
+      ],
+      "i": 4,
+      "t": "span"
+    }
+  ],
+  "db509e67965fe2e4": "Un panel de control de inventario que demuestra la internacionalización con General Translation."
 }

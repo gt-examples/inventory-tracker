@@ -1,4 +1,4 @@
-import { T, Num, Currency, DateTime, Plural, Branch } from "gt-next";
+import { T, Num, Currency, DateTime, Plural, Branch, Var } from "gt-next";
 import { LocaleSelector } from "gt-next";
 
 const inventory = [
@@ -58,10 +58,77 @@ const inventory = [
   },
 ];
 
+type Recipe = {
+  id: string;
+  name: string;
+  ingredients: { category: string; label: string; quantity: number }[];
+  outputQuantity: number;
+};
+
+const recipes: Recipe[] = [
+  {
+    id: "RCP-001",
+    name: "Wired Shelf Bracket",
+    ingredients: [
+      { category: "hardware", label: "Steel Bolts", quantity: 8 },
+      { category: "lumber", label: "Oak Planks", quantity: 2 },
+      { category: "electrical", label: "Copper Wire", quantity: 1 },
+    ],
+    outputQuantity: 1,
+  },
+  {
+    id: "RCP-002",
+    name: "Plumbing Assembly",
+    ingredients: [
+      { category: "plumbing", label: "PVC Pipes", quantity: 4 },
+      { category: "hardware", label: "Steel Bolts", quantity: 12 },
+      { category: "masonry", label: "Concrete Mix", quantity: 2 },
+    ],
+    outputQuantity: 1,
+  },
+  {
+    id: "RCP-003",
+    name: "Concrete Anchor Post",
+    ingredients: [
+      { category: "masonry", label: "Concrete Mix", quantity: 6 },
+      { category: "lumber", label: "Oak Planks", quantity: 4 },
+      { category: "hardware", label: "Steel Bolts", quantity: 20 },
+    ],
+    outputQuantity: 2,
+  },
+  {
+    id: "RCP-004",
+    name: "Illuminated Display Unit",
+    ingredients: [
+      { category: "electrical", label: "LED Panel Lights", quantity: 2 },
+      { category: "lumber", label: "Oak Planks", quantity: 6 },
+      { category: "hardware", label: "Steel Bolts", quantity: 16 },
+      { category: "electrical", label: "Copper Wire", quantity: 3 },
+    ],
+    outputQuantity: 1,
+  },
+];
+
 function getStatus(stock: number, threshold: number): "ok" | "low" | "out" {
   if (stock === 0) return "out";
   if (stock <= threshold) return "low";
   return "ok";
+}
+
+function getStockByCategory(cat: string): number {
+  return inventory
+    .filter((item) => item.category === cat)
+    .reduce((sum, item) => sum + item.stock, 0);
+}
+
+function getMaxCraftable(recipe: Recipe): number {
+  let max = Infinity;
+  for (const ingredient of recipe.ingredients) {
+    const available = getStockByCategory(ingredient.category);
+    const possible = Math.floor(available / ingredient.quantity);
+    if (possible < max) max = possible;
+  }
+  return max === Infinity ? 0 : max;
 }
 
 export default function Home() {
@@ -74,6 +141,15 @@ export default function Home() {
     (item) => getStatus(item.stock, item.lowThreshold) === "low"
   ).length;
   const outOfStockCount = inventory.filter((item) => item.stock === 0).length;
+
+  // Category breakdown
+  const categories = Array.from(new Set(inventory.map((i) => i.category)));
+  const categoryStats = categories.map((cat) => {
+    const items = inventory.filter((i) => i.category === cat);
+    const units = items.reduce((s, i) => s + i.stock, 0);
+    const value = items.reduce((s, i) => s + i.stock * i.price, 0);
+    return { category: cat, count: items.length, units, value };
+  });
 
   return (
     <div className="min-h-screen bg-neutral-950 font-sans text-neutral-200">
@@ -183,8 +259,46 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Category breakdown */}
+        <T>
+          <div className="mb-10">
+            <h3 className="text-lg font-semibold text-neutral-100 mb-4">
+              Inventory by Category
+            </h3>
+          </div>
+        </T>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+          {categoryStats.map((cat) => (
+            <div
+              key={cat.category}
+              className="rounded-lg border border-neutral-800 bg-neutral-900 p-4"
+            >
+              <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide mb-2">
+                {cat.category}
+              </p>
+              <T>
+                <div className="space-y-1">
+                  <p className="text-sm text-neutral-300">
+                    <Plural
+                      n={cat.count}
+                      singular={<><Num>{cat.count}</Num> product</>}
+                      plural={<><Num>{cat.count}</Num> products</>}
+                    />
+                  </p>
+                  <p className="text-sm text-neutral-300">
+                    <Num>{cat.units}</Num> units in stock
+                  </p>
+                  <p className="text-sm text-neutral-400">
+                    Value: <Currency currency="USD">{cat.value}</Currency>
+                  </p>
+                </div>
+              </T>
+            </div>
+          ))}
+        </div>
+
         {/* Inventory table */}
-        <div className="rounded-lg border border-neutral-800 overflow-hidden">
+        <div className="rounded-lg border border-neutral-800 overflow-hidden mb-14">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -268,6 +382,119 @@ export default function Home() {
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* Crafting recipes */}
+        <T>
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold text-neutral-100 mb-3">
+              Crafting View
+            </h2>
+            <p className="text-base text-neutral-400 max-w-2xl leading-relaxed">
+              Recipes that can be assembled from current inventory. Availability
+              is calculated from stock levels across categories.
+            </p>
+          </div>
+        </T>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          {recipes.map((recipe) => {
+            const maxCraftable = getMaxCraftable(recipe);
+            const craftable = maxCraftable > 0;
+            return (
+              <div
+                key={recipe.id}
+                className={`rounded-lg border p-5 ${
+                  craftable
+                    ? "border-emerald-800/50 bg-emerald-950/20"
+                    : "border-neutral-800 bg-neutral-900/50"
+                }`}
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <p className="text-sm font-semibold text-neutral-100">
+                      {recipe.name}
+                    </p>
+                    <p className="text-xs text-neutral-500 font-mono">
+                      {recipe.id}
+                    </p>
+                  </div>
+                  <Branch
+                    branch={craftable ? "available" : "unavailable"}
+                    available={
+                      <T>
+                        <span className="inline-flex items-center rounded-full bg-emerald-950 px-2.5 py-0.5 text-xs font-medium text-emerald-400 border border-emerald-800">
+                          Available
+                        </span>
+                      </T>
+                    }
+                    unavailable={
+                      <T>
+                        <span className="inline-flex items-center rounded-full bg-neutral-800 px-2.5 py-0.5 text-xs font-medium text-neutral-500 border border-neutral-700">
+                          Insufficient Stock
+                        </span>
+                      </T>
+                    }
+                  />
+                </div>
+
+                <T>
+                  <div className="mb-3">
+                    <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide mb-2">
+                      Required Materials
+                    </p>
+                  </div>
+                </T>
+                <ul className="space-y-1.5 mb-4">
+                  {recipe.ingredients.map((ing, idx) => {
+                    const available = getStockByCategory(ing.category);
+                    const sufficient = available >= ing.quantity;
+                    return (
+                      <li key={idx} className="flex items-center justify-between text-sm">
+                        <T>
+                          <span className={sufficient ? "text-neutral-300" : "text-red-400"}>
+                            <Num>{ing.quantity}</Num>x <Var>{ing.label}</Var>
+                          </span>
+                          <span className={`text-xs ${sufficient ? "text-neutral-500" : "text-red-500"}`}>
+                            <Num>{available}</Num> available
+                          </span>
+                        </T>
+                      </li>
+                    );
+                  })}
+                </ul>
+
+                <div className="border-t border-neutral-800 pt-3 flex items-center justify-between">
+                  <T>
+                    <p className="text-xs text-neutral-500">
+                      <Plural
+                        n={recipe.outputQuantity}
+                        singular={<>Produces <Num>{recipe.outputQuantity}</Num> unit</>}
+                        plural={<>Produces <Num>{recipe.outputQuantity}</Num> units</>}
+                      />
+                    </p>
+                  </T>
+                  <T>
+                    <p className="text-sm font-medium">
+                      <Branch
+                        branch={craftable ? "can" : "cannot"}
+                        can={
+                          <span className="text-emerald-400">
+                            Can craft up to <Num>{maxCraftable}</Num>
+                          </span>
+                        }
+                        cannot={
+                          <span className="text-neutral-600">
+                            Cannot craft
+                          </span>
+                        }
+                      />
+                    </p>
+                  </T>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Footer note */}

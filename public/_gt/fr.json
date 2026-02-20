@@ -1,4 +1,104 @@
 {
+  "049edd2ad19a6bc9": {
+    "c": [
+      {
+        "c": {
+          "d": {
+            "b": {
+              "many": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " produits"
+                ],
+                "i": 4,
+                "t": "C4"
+              },
+              "other": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " produits"
+                ],
+                "i": 4,
+                "t": "C4"
+              },
+              "plural": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " produits"
+                ],
+                "i": 4,
+                "t": "C4"
+              },
+              "singular": {
+                "c": [
+                  {
+                    "i": 5,
+                    "k": "_gt_n_5",
+                    "v": "n"
+                  },
+                  " produit"
+                ],
+                "i": 4,
+                "t": "C4"
+              }
+            },
+            "t": "p"
+          },
+          "i": 3,
+          "t": "Plural"
+        },
+        "i": 2,
+        "t": "p"
+      },
+      {
+        "c": [
+          {
+            "i": 5,
+            "k": "_gt_n_5",
+            "v": "n"
+          },
+          " unités en stock"
+        ],
+        "i": 4,
+        "t": "p"
+      },
+      {
+        "c": [
+          "Valeur : ",
+          {
+            "i": 7,
+            "k": "_gt_cost_7",
+            "v": "c"
+          }
+        ],
+        "i": 6,
+        "t": "p"
+      }
+    ],
+    "i": 1,
+    "t": "div"
+  },
+  "04f066692f0cdc7e": {
+    "c": {
+      "c": "Matériaux requis",
+      "i": 2,
+      "t": "p"
+    },
+    "i": 1,
+    "t": "div"
+  },
   "11aaa87d615f2da8": [
     {
       "c": "Rupture de stock",
@@ -16,7 +116,7 @@
                   "k": "_gt_n_5",
                   "v": "n"
                 },
-                " articles"
+                " éléments"
               ],
               "i": 4,
               "t": "C4"
@@ -28,7 +128,7 @@
                   "k": "_gt_n_5",
                   "v": "n"
                 },
-                " articles"
+                " éléments"
               ],
               "i": 4,
               "t": "C4"
@@ -40,7 +140,7 @@
                   "k": "_gt_n_5",
                   "v": "n"
                 },
-                " articles"
+                " éléments"
               ],
               "i": 4,
               "t": "C4"
@@ -68,14 +168,109 @@
       "t": "p"
     }
   ],
+  "183887ca9639536f": {
+    "c": {
+      "d": {
+        "b": {
+          "many": {
+            "c": [
+              "Produit ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unités"
+            ],
+            "i": 3,
+            "t": "C3"
+          },
+          "other": {
+            "c": [
+              "Produit ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unités"
+            ],
+            "i": 3,
+            "t": "C3"
+          },
+          "plural": {
+            "c": [
+              "Produit ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unités"
+            ],
+            "i": 3,
+            "t": "C3"
+          },
+          "singular": {
+            "c": [
+              "Produit ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              },
+              " unité"
+            ],
+            "i": 3,
+            "t": "C3"
+          }
+        },
+        "t": "p"
+      },
+      "i": 2,
+      "t": "Plural"
+    },
+    "i": 1,
+    "t": "p"
+  },
   "1ef8ae8b394c2133": {
     "c": "Rupture de stock",
     "i": 1,
     "t": "span"
   },
+  "337a857a08109018": {
+    "c": {
+      "d": {
+        "b": {
+          "can": {
+            "c": [
+              "Peut fabriquer jusqu'à ",
+              {
+                "i": 4,
+                "k": "_gt_n_4",
+                "v": "n"
+              }
+            ],
+            "i": 3,
+            "t": "span"
+          },
+          "cannot": {
+            "c": "Impossible de fabriquer",
+            "i": 3,
+            "t": "span"
+          }
+        },
+        "t": "b"
+      },
+      "i": 2,
+      "t": "Branch"
+    },
+    "i": 1,
+    "t": "p"
+  },
   "4c280d48821b9916": [
     {
-      "c": "Total des unités",
+      "c": "Unités totales",
       "i": 1,
       "t": "p"
     },
@@ -123,6 +318,11 @@
     "t": "div"
   },
   "6a7e8f86ca6ff79a": "Suivi des stocks | General Translation",
+  "6b03d4284ec2bca7": {
+    "c": "Disponible",
+    "i": 1,
+    "t": "span"
+  },
   "7662c4f44f72aac4": [
     {
       "c": "Produit",
@@ -155,15 +355,45 @@
       "t": "th"
     }
   ],
+  "777aa12497719083": {
+    "c": {
+      "c": "Inventaire par catégorie",
+      "i": 2,
+      "t": "h3"
+    },
+    "i": 1,
+    "t": "div"
+  },
   "8f7406f6b4f65663": {
     "c": "Stock faible",
     "i": 1,
     "t": "span"
   },
+  "a2f5131662099cad": {
+    "c": "Stock insuffisant",
+    "i": 1,
+    "t": "span"
+  },
   "a4f4d02afd938a3e": {
-    "c": "Il s'agit d'un exemple d'application développée avec General Translation pour illustrer les fonctionnalités d'internationalisation, notamment le formatage des nombres, des devises et des dates selon la locale.",
+    "c": "Voici un exemple d'application développée avec General Translation pour illustrer les fonctionnalités d'internationalisation, notamment le formatage des nombres, des devises et des dates selon la locale.",
     "i": 1,
     "t": "p"
+  },
+  "b5aeeb7617c517e0": {
+    "c": [
+      {
+        "c": "Vue de création",
+        "i": 2,
+        "t": "h2"
+      },
+      {
+        "c": "Recettes pouvant être assemblées à partir de l'inventaire actuel. La disponibilité est calculée à partir des niveaux de stock par catégorie.",
+        "i": 3,
+        "t": "p"
+      }
+    ],
+    "i": 1,
+    "t": "div"
   },
   "b5dec3213547ddeb": [
     {
@@ -182,7 +412,7 @@
                   "k": "_gt_n_5",
                   "v": "n"
                 },
-                " articles"
+                " d'articles"
               ],
               "i": 4,
               "t": "C4"
@@ -194,7 +424,7 @@
                   "k": "_gt_n_5",
                   "v": "n"
                 },
-                " articles"
+                " d'articles"
               ],
               "i": 4,
               "t": "C4"
@@ -206,7 +436,7 @@
                   "k": "_gt_n_5",
                   "v": "n"
                 },
-                " articles"
+                " d'articles"
               ],
               "i": 4,
               "t": "C4"
@@ -239,5 +469,36 @@
     "i": 1,
     "t": "span"
   },
-  "db509e67965fe2e4": "Un tableau de bord de suivi des stocks illustrant l’internationalisation avec General Translation."
+  "cb974a4a428230f6": [
+    {
+      "c": [
+        {
+          "i": 2,
+          "k": "_gt_n_2",
+          "v": "n"
+        },
+        "x ",
+        {
+          "i": 3,
+          "k": "_gt_value_3",
+          "v": "v"
+        }
+      ],
+      "i": 1,
+      "t": "span"
+    },
+    {
+      "c": [
+        {
+          "i": 5,
+          "k": "_gt_n_5",
+          "v": "n"
+        },
+        " disponible"
+      ],
+      "i": 4,
+      "t": "span"
+    }
+  ],
+  "db509e67965fe2e4": "Un tableau de bord de gestion des stocks illustrant l’internationalisation avec General Translation."
 }
