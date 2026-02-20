@@ -1,0 +1,243 @@
+{
+  "11aaa87d615f2da8": [
+    {
+      "c": "Rupture de stock",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "d": {
+          "b": {
+            "many": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " articles"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "other": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " articles"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "plural": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " articles"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "singular": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " article"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "zero": "Aucune"
+          },
+          "t": "p"
+        },
+        "i": 3,
+        "t": "Plural"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "1ef8ae8b394c2133": {
+    "c": "Rupture de stock",
+    "i": 1,
+    "t": "span"
+  },
+  "4c280d48821b9916": [
+    {
+      "c": "Total des unités",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "i": 3,
+        "k": "_gt_n_3",
+        "v": "n"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "50b8849b0c8f6a9b": "Suivi d'inventaire",
+  "5490d562fdaa321d": [
+    {
+      "c": "Valeur de l'inventaire",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "i": 3,
+        "k": "_gt_cost_3",
+        "v": "c"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "5d77df2e066ccd13": {
+    "c": [
+      {
+        "c": "Tableau de bord des stocks",
+        "i": 2,
+        "t": "h2"
+      },
+      {
+        "c": "Suivez les niveaux de stock, les prix et les dates de réapprovisionnement de votre entrepôt. Cet exemple illustre le formatage des nombres selon la locale, l'affichage des devises, le rendu des dates, la gestion du Pluriel et de la Branche conditionnelle.",
+        "i": 3,
+        "t": "p"
+      }
+    ],
+    "i": 1,
+    "t": "div"
+  },
+  "6a7e8f86ca6ff79a": "Suivi des stocks | General Translation",
+  "7662c4f44f72aac4": [
+    {
+      "c": "Produit",
+      "i": 1,
+      "t": "th"
+    },
+    {
+      "c": "SKU",
+      "i": 2,
+      "t": "th"
+    },
+    {
+      "c": "Stock",
+      "i": 3,
+      "t": "th"
+    },
+    {
+      "c": "Prix unitaire",
+      "i": 4,
+      "t": "th"
+    },
+    {
+      "c": "Dernier réapprovisionnement",
+      "i": 5,
+      "t": "th"
+    },
+    {
+      "c": "Statut",
+      "i": 6,
+      "t": "th"
+    }
+  ],
+  "8f7406f6b4f65663": {
+    "c": "Stock faible",
+    "i": 1,
+    "t": "span"
+  },
+  "a4f4d02afd938a3e": {
+    "c": "Il s'agit d'un exemple d'application développée avec General Translation pour illustrer les fonctionnalités d'internationalisation, notamment le formatage des nombres, des devises et des dates selon la locale.",
+    "i": 1,
+    "t": "p"
+  },
+  "b5dec3213547ddeb": [
+    {
+      "c": "Stock faible",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "d": {
+          "b": {
+            "many": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " articles"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "other": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " articles"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "plural": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " articles"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "singular": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " article"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "zero": "Aucun"
+          },
+          "t": "p"
+        },
+        "i": 3,
+        "t": "Plural"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "c005fb88c3e7047d": {
+    "c": "En stock",
+    "i": 1,
+    "t": "span"
+  },
+  "db509e67965fe2e4": "Un tableau de bord de suivi des stocks illustrant l’internationalisation avec General Translation."
+}

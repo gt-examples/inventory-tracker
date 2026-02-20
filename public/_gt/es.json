@@ -1,0 +1,243 @@
+{
+  "11aaa87d615f2da8": [
+    {
+      "c": "Agotado",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "d": {
+          "b": {
+            "many": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " artículos"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "other": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " artículos"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "plural": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " artículos"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "singular": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " artículo"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "zero": "Ninguna"
+          },
+          "t": "p"
+        },
+        "i": 3,
+        "t": "Plural"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "1ef8ae8b394c2133": {
+    "c": "Agotado",
+    "i": 1,
+    "t": "span"
+  },
+  "4c280d48821b9916": [
+    {
+      "c": "Unidades Totales",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "i": 3,
+        "k": "_gt_n_3",
+        "v": "n"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "50b8849b0c8f6a9b": "Rastreador de inventario",
+  "5490d562fdaa321d": [
+    {
+      "c": "Valor del inventario",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "i": 3,
+        "k": "_gt_cost_3",
+        "v": "c"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "5d77df2e066ccd13": {
+    "c": [
+      {
+        "c": "Panel de inventario",
+        "i": 2,
+        "t": "h2"
+      },
+      {
+        "c": "Realiza un seguimiento de los niveles de stock, precios y fechas de reabastecimiento de tu almacén. Este ejemplo demuestra el formato de números según la configuración regional, la visualización de moneda, la representación de fechas, la pluralización y la ramificación condicional.",
+        "i": 3,
+        "t": "p"
+      }
+    ],
+    "i": 1,
+    "t": "div"
+  },
+  "6a7e8f86ca6ff79a": "Seguimiento de inventario | General Translation",
+  "7662c4f44f72aac4": [
+    {
+      "c": "Producto",
+      "i": 1,
+      "t": "th"
+    },
+    {
+      "c": "SKU",
+      "i": 2,
+      "t": "th"
+    },
+    {
+      "c": "Stock",
+      "i": 3,
+      "t": "th"
+    },
+    {
+      "c": "Precio unitario",
+      "i": 4,
+      "t": "th"
+    },
+    {
+      "c": "Última reposición",
+      "i": 5,
+      "t": "th"
+    },
+    {
+      "c": "Estado",
+      "i": 6,
+      "t": "th"
+    }
+  ],
+  "8f7406f6b4f65663": {
+    "c": "Poco stock",
+    "i": 1,
+    "t": "span"
+  },
+  "a4f4d02afd938a3e": {
+    "c": "Esta es una aplicación de ejemplo creada con General Translation para demostrar funciones de internacionalización, incluyendo formato de números, divisas y fechas según la configuración regional.",
+    "i": 1,
+    "t": "p"
+  },
+  "b5dec3213547ddeb": [
+    {
+      "c": "Pocas existencias",
+      "i": 1,
+      "t": "p"
+    },
+    {
+      "c": {
+        "d": {
+          "b": {
+            "many": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " de artículos"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "other": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " de artículos"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "plural": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " de artículos"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "singular": {
+              "c": [
+                {
+                  "i": 5,
+                  "k": "_gt_n_5",
+                  "v": "n"
+                },
+                " artículo"
+              ],
+              "i": 4,
+              "t": "C4"
+            },
+            "zero": "Ninguno"
+          },
+          "t": "p"
+        },
+        "i": 3,
+        "t": "Plural"
+      },
+      "i": 2,
+      "t": "p"
+    }
+  ],
+  "c005fb88c3e7047d": {
+    "c": "En stock",
+    "i": 1,
+    "t": "span"
+  },
+  "db509e67965fe2e4": "Panel de gestión de inventario que muestra la internacionalización con General Translation."
+}
