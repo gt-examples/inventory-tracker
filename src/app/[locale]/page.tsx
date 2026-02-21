@@ -60,28 +60,32 @@ const inventory = [
 
 function ProductName({ name }: { name: string }) {
   return (
-    <Branch
-      branch={name}
-      steel-bolts={<T>Steel Bolts (M8x30)</T>}
-      copper-wire={<T>Copper Wire (14 AWG)</T>}
-      oak-planks={<T>Oak Planks (2x4x8)</T>}
-      pvc-pipe={<T>PVC Pipe (1 inch)</T>}
-      led-panel={<T>LED Panel Light</T>}
-      concrete-mix={<T>Concrete Mix (50 lb)</T>}
-    />
+    <T>
+      <Branch
+        branch={name}
+        steel-bolts={<>Steel Bolts (M8x30)</>}
+        copper-wire={<>Copper Wire (14 AWG)</>}
+        oak-planks={<>Oak Planks (2x4x8)</>}
+        pvc-pipe={<>PVC Pipe (1 inch)</>}
+        led-panel={<>LED Panel Light</>}
+        concrete-mix={<>Concrete Mix (50 lb)</>}
+      />
+    </T>
   );
 }
 
 function CategoryName({ category }: { category: string }) {
   return (
-    <Branch
-      branch={category}
-      hardware={<T>Hardware</T>}
-      electrical={<T>Electrical</T>}
-      lumber={<T>Lumber</T>}
-      plumbing={<T>Plumbing</T>}
-      masonry={<T>Masonry</T>}
-    />
+    <T>
+      <Branch
+        branch={category}
+        hardware={<>Hardware</>}
+        electrical={<>Electrical</>}
+        lumber={<>Lumber</>}
+        plumbing={<>Plumbing</>}
+        masonry={<>Masonry</>}
+      />
+    </T>
   );
 }
 
@@ -138,27 +142,31 @@ const recipes: Recipe[] = [
 
 function RecipeName({ name }: { name: string }) {
   return (
-    <Branch
-      branch={name}
-      wired-shelf-bracket={<T>Wired Shelf Bracket</T>}
-      plumbing-assembly={<T>Plumbing Assembly</T>}
-      concrete-anchor-post={<T>Concrete Anchor Post</T>}
-      illuminated-display={<T>Illuminated Display Unit</T>}
-    />
+    <T>
+      <Branch
+        branch={name}
+        wired-shelf-bracket={<>Wired Shelf Bracket</>}
+        plumbing-assembly={<>Plumbing Assembly</>}
+        concrete-anchor-post={<>Concrete Anchor Post</>}
+        illuminated-display={<>Illuminated Display Unit</>}
+      />
+    </T>
   );
 }
 
 function IngredientLabel({ label }: { label: string }) {
   return (
-    <Branch
-      branch={label}
-      steel-bolts={<T>Steel Bolts</T>}
-      copper-wire={<T>Copper Wire</T>}
-      oak-planks={<T>Oak Planks</T>}
-      pvc-pipe={<T>PVC Pipes</T>}
-      led-panel={<T>LED Panel Lights</T>}
-      concrete-mix={<T>Concrete Mix</T>}
-    />
+    <T>
+      <Branch
+        branch={label}
+        steel-bolts={<>Steel Bolts</>}
+        copper-wire={<>Copper Wire</>}
+        oak-planks={<>Oak Planks</>}
+        pvc-pipe={<>PVC Pipes</>}
+        led-panel={<>LED Panel Lights</>}
+        concrete-mix={<>Concrete Mix</>}
+      />
+    </T>
   );
 }
 
