@@ -4,7 +4,7 @@ import { LocaleSelector } from "gt-next";
 const inventory = [
   {
     id: "WDG-001",
-    name: "Steel Bolts (M8x30)",
+    name: "steel-bolts",
     category: "hardware",
     stock: 2450,
     price: 0.12,
@@ -13,7 +13,7 @@ const inventory = [
   },
   {
     id: "WDG-002",
-    name: "Copper Wire (14 AWG)",
+    name: "copper-wire",
     category: "electrical",
     stock: 85,
     price: 24.99,
@@ -22,7 +22,7 @@ const inventory = [
   },
   {
     id: "WDG-003",
-    name: "Oak Planks (2x4x8)",
+    name: "oak-planks",
     category: "lumber",
     stock: 340,
     price: 8.75,
@@ -31,7 +31,7 @@ const inventory = [
   },
   {
     id: "WDG-004",
-    name: "PVC Pipe (1 inch)",
+    name: "pvc-pipe",
     category: "plumbing",
     stock: 12,
     price: 3.49,
@@ -40,7 +40,7 @@ const inventory = [
   },
   {
     id: "WDG-005",
-    name: "LED Panel Light",
+    name: "led-panel",
     category: "electrical",
     stock: 0,
     price: 45.0,
@@ -49,7 +49,7 @@ const inventory = [
   },
   {
     id: "WDG-006",
-    name: "Concrete Mix (50 lb)",
+    name: "concrete-mix",
     category: "masonry",
     stock: 178,
     price: 6.25,
@@ -57,6 +57,33 @@ const inventory = [
     lowThreshold: 30,
   },
 ];
+
+function ProductName({ name }: { name: string }) {
+  return (
+    <Branch
+      branch={name}
+      steel-bolts={<T>Steel Bolts (M8x30)</T>}
+      copper-wire={<T>Copper Wire (14 AWG)</T>}
+      oak-planks={<T>Oak Planks (2x4x8)</T>}
+      pvc-pipe={<T>PVC Pipe (1 inch)</T>}
+      led-panel={<T>LED Panel Light</T>}
+      concrete-mix={<T>Concrete Mix (50 lb)</T>}
+    />
+  );
+}
+
+function CategoryName({ category }: { category: string }) {
+  return (
+    <Branch
+      branch={category}
+      hardware={<T>Hardware</T>}
+      electrical={<T>Electrical</T>}
+      lumber={<T>Lumber</T>}
+      plumbing={<T>Plumbing</T>}
+      masonry={<T>Masonry</T>}
+    />
+  );
+}
 
 type Recipe = {
   id: string;
@@ -68,46 +95,72 @@ type Recipe = {
 const recipes: Recipe[] = [
   {
     id: "RCP-001",
-    name: "Wired Shelf Bracket",
+    name: "wired-shelf-bracket",
     ingredients: [
-      { category: "hardware", label: "Steel Bolts", quantity: 8 },
-      { category: "lumber", label: "Oak Planks", quantity: 2 },
-      { category: "electrical", label: "Copper Wire", quantity: 1 },
+      { category: "hardware", label: "steel-bolts", quantity: 8 },
+      { category: "lumber", label: "oak-planks", quantity: 2 },
+      { category: "electrical", label: "copper-wire", quantity: 1 },
     ],
     outputQuantity: 1,
   },
   {
     id: "RCP-002",
-    name: "Plumbing Assembly",
+    name: "plumbing-assembly",
     ingredients: [
-      { category: "plumbing", label: "PVC Pipes", quantity: 4 },
-      { category: "hardware", label: "Steel Bolts", quantity: 12 },
-      { category: "masonry", label: "Concrete Mix", quantity: 2 },
+      { category: "plumbing", label: "pvc-pipe", quantity: 4 },
+      { category: "hardware", label: "steel-bolts", quantity: 12 },
+      { category: "masonry", label: "concrete-mix", quantity: 2 },
     ],
     outputQuantity: 1,
   },
   {
     id: "RCP-003",
-    name: "Concrete Anchor Post",
+    name: "concrete-anchor-post",
     ingredients: [
-      { category: "masonry", label: "Concrete Mix", quantity: 6 },
-      { category: "lumber", label: "Oak Planks", quantity: 4 },
-      { category: "hardware", label: "Steel Bolts", quantity: 20 },
+      { category: "masonry", label: "concrete-mix", quantity: 6 },
+      { category: "lumber", label: "oak-planks", quantity: 4 },
+      { category: "hardware", label: "steel-bolts", quantity: 20 },
     ],
     outputQuantity: 2,
   },
   {
     id: "RCP-004",
-    name: "Illuminated Display Unit",
+    name: "illuminated-display",
     ingredients: [
-      { category: "electrical", label: "LED Panel Lights", quantity: 2 },
-      { category: "lumber", label: "Oak Planks", quantity: 6 },
-      { category: "hardware", label: "Steel Bolts", quantity: 16 },
-      { category: "electrical", label: "Copper Wire", quantity: 3 },
+      { category: "electrical", label: "led-panel", quantity: 2 },
+      { category: "lumber", label: "oak-planks", quantity: 6 },
+      { category: "hardware", label: "steel-bolts", quantity: 16 },
+      { category: "electrical", label: "copper-wire", quantity: 3 },
     ],
     outputQuantity: 1,
   },
 ];
+
+function RecipeName({ name }: { name: string }) {
+  return (
+    <Branch
+      branch={name}
+      wired-shelf-bracket={<T>Wired Shelf Bracket</T>}
+      plumbing-assembly={<T>Plumbing Assembly</T>}
+      concrete-anchor-post={<T>Concrete Anchor Post</T>}
+      illuminated-display={<T>Illuminated Display Unit</T>}
+    />
+  );
+}
+
+function IngredientLabel({ label }: { label: string }) {
+  return (
+    <Branch
+      branch={label}
+      steel-bolts={<T>Steel Bolts</T>}
+      copper-wire={<T>Copper Wire</T>}
+      oak-planks={<T>Oak Planks</T>}
+      pvc-pipe={<T>PVC Pipes</T>}
+      led-panel={<T>LED Panel Lights</T>}
+      concrete-mix={<T>Concrete Mix</T>}
+    />
+  );
+}
 
 function getStatus(stock: number, threshold: number): "ok" | "low" | "out" {
   if (stock === 0) return "out";
@@ -142,7 +195,6 @@ export default function Home() {
   ).length;
   const outOfStockCount = inventory.filter((item) => item.stock === 0).length;
 
-  // Category breakdown
   const categories = Array.from(new Set(inventory.map((i) => i.category)));
   const categoryStats = categories.map((cat) => {
     const items = inventory.filter((i) => i.category === cat);
@@ -274,7 +326,7 @@ export default function Home() {
               className="rounded-lg border border-neutral-800 bg-neutral-900 p-4"
             >
               <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide mb-2">
-                {cat.category}
+                <CategoryName category={cat.category} />
               </p>
               <T>
                 <div className="space-y-1">
@@ -334,7 +386,7 @@ export default function Home() {
                       className="border-b border-neutral-800/50 hover:bg-neutral-900/50 transition-colors"
                     >
                       <td className="px-4 py-3 font-medium text-neutral-200">
-                        {item.name}
+                        <ProductName name={item.name} />
                       </td>
                       <td className="px-4 py-3 text-neutral-500 font-mono text-xs">
                         {item.id}
@@ -351,30 +403,26 @@ export default function Home() {
                         </DateTime>
                       </td>
                       <td className="px-4 py-3">
-                        <Branch
-                          branch={status}
-                          ok={
-                            <T>
+                        <T>
+                          <Branch
+                            branch={status}
+                            ok={
                               <span className="inline-flex items-center rounded-full bg-emerald-950 px-2.5 py-0.5 text-xs font-medium text-emerald-400 border border-emerald-800">
                                 In Stock
                               </span>
-                            </T>
-                          }
-                          low={
-                            <T>
+                            }
+                            low={
                               <span className="inline-flex items-center rounded-full bg-amber-950 px-2.5 py-0.5 text-xs font-medium text-amber-400 border border-amber-800">
                                 Low Stock
                               </span>
-                            </T>
-                          }
-                          out={
-                            <T>
+                            }
+                            out={
                               <span className="inline-flex items-center rounded-full bg-red-950 px-2.5 py-0.5 text-xs font-medium text-red-400 border border-red-800">
                                 Out of Stock
                               </span>
-                            </T>
-                          }
-                        />
+                            }
+                          />
+                        </T>
                       </td>
                     </tr>
                   );
@@ -413,29 +461,27 @@ export default function Home() {
                 <div className="flex items-start justify-between mb-3">
                   <div>
                     <p className="text-sm font-semibold text-neutral-100">
-                      {recipe.name}
+                      <RecipeName name={recipe.name} />
                     </p>
                     <p className="text-xs text-neutral-500 font-mono">
                       {recipe.id}
                     </p>
                   </div>
-                  <Branch
-                    branch={craftable ? "available" : "unavailable"}
-                    available={
-                      <T>
+                  <T>
+                    <Branch
+                      branch={craftable ? "available" : "unavailable"}
+                      available={
                         <span className="inline-flex items-center rounded-full bg-emerald-950 px-2.5 py-0.5 text-xs font-medium text-emerald-400 border border-emerald-800">
                           Available
                         </span>
-                      </T>
-                    }
-                    unavailable={
-                      <T>
+                      }
+                      unavailable={
                         <span className="inline-flex items-center rounded-full bg-neutral-800 px-2.5 py-0.5 text-xs font-medium text-neutral-500 border border-neutral-700">
                           Insufficient Stock
                         </span>
-                      </T>
-                    }
-                  />
+                      }
+                    />
+                  </T>
                 </div>
 
                 <T>
@@ -451,14 +497,12 @@ export default function Home() {
                     const sufficient = available >= ing.quantity;
                     return (
                       <li key={idx} className="flex items-center justify-between text-sm">
-                        <T>
-                          <span className={sufficient ? "text-neutral-300" : "text-red-400"}>
-                            <Num>{ing.quantity}</Num>x <Var>{ing.label}</Var>
-                          </span>
-                          <span className={`text-xs ${sufficient ? "text-neutral-500" : "text-red-500"}`}>
-                            <Num>{available}</Num> available
-                          </span>
-                        </T>
+                        <span className={sufficient ? "text-neutral-300" : "text-red-400"}>
+                          <T><Num>{ing.quantity}</Num>x <Var><IngredientLabel label={ing.label} /></Var></T>
+                        </span>
+                        <span className={`text-xs ${sufficient ? "text-neutral-500" : "text-red-500"}`}>
+                          <T><Num>{available}</Num> available</T>
+                        </span>
                       </li>
                     );
                   })}

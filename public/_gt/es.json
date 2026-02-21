@@ -12,7 +12,7 @@
                     "k": "_gt_n_5",
                     "v": "n"
                   },
-                  " de productos"
+                  " productos"
                 ],
                 "i": 4,
                 "t": "C4"
@@ -24,7 +24,7 @@
                     "k": "_gt_n_5",
                     "v": "n"
                   },
-                  " de productos"
+                  " productos"
                 ],
                 "i": 4,
                 "t": "C4"
@@ -36,7 +36,7 @@
                     "k": "_gt_n_5",
                     "v": "n"
                   },
-                  " de productos"
+                  " productos"
                 ],
                 "i": 4,
                 "t": "C4"
@@ -99,6 +99,8 @@
     "i": 1,
     "t": "div"
   },
+  "0801900834216f9d": "Tuberías de PVC",
+  "0fa91c7daa886a40": "Steel Bolts",
   "11aaa87d615f2da8": [
     {
       "c": "Agotado",
@@ -168,6 +170,7 @@
       "t": "p"
     }
   ],
+  "163af57cc68d721b": "Hardware",
   "183887ca9639536f": {
     "c": {
       "d": {
@@ -233,11 +236,43 @@
     "i": 1,
     "t": "p"
   },
-  "1ef8ae8b394c2133": {
-    "c": "Agotado",
+  "1e13acb7bf21adbc": "Poste de anclaje de concreto",
+  "1f59ea8e0bcea587": "Lumber",
+  "272862e50365bca8": "Tablones de roble",
+  "2983efb5d2beae39": "Unidad de Pantalla Iluminada",
+  "2f18069d128b0c2e": "Mezcla de concreto (50 lb)",
+  "2f2f94bbf5944c5e": {
+    "d": {
+      "b": {
+        "available": {
+          "c": "Disponible",
+          "i": 2,
+          "t": "span"
+        },
+        "unavailable": {
+          "c": "Stock insuficiente",
+          "i": 2,
+          "t": "span"
+        }
+      },
+      "t": "b"
+    },
     "i": 1,
-    "t": "span"
+    "t": "Branch"
   },
+  "31f2754daddd7c18": [
+    {
+      "i": 1,
+      "k": "_gt_n_1",
+      "v": "n"
+    },
+    "x ",
+    {
+      "i": 2,
+      "k": "_gt_value_2",
+      "v": "v"
+    }
+  ],
   "337a857a08109018": {
     "c": {
       "d": {
@@ -268,9 +303,10 @@
     "i": 1,
     "t": "p"
   },
+  "3ce696d4297b267e": "Eléctrico",
   "4c280d48821b9916": [
     {
-      "c": "Unidades totales",
+      "c": "Unidades Totales",
       "i": 1,
       "t": "p"
     },
@@ -318,11 +354,14 @@
     "t": "div"
   },
   "6a7e8f86ca6ff79a": "Control de inventario | General Translation",
-  "6b03d4284ec2bca7": {
-    "c": "Disponible",
-    "i": 1,
-    "t": "span"
-  },
+  "71f8b3d2c2b604b1": [
+    {
+      "i": 1,
+      "k": "_gt_n_1",
+      "v": "n"
+    },
+    " disponible"
+  ],
   "7662c4f44f72aac4": [
     {
       "c": "Producto",
@@ -345,7 +384,7 @@
       "t": "th"
     },
     {
-      "c": "Último reabastecimiento",
+      "c": "Última reposición",
       "i": 5,
       "t": "th"
     },
@@ -364,21 +403,42 @@
     "i": 1,
     "t": "div"
   },
-  "8f7406f6b4f65663": {
-    "c": "Poco stock",
-    "i": 1,
-    "t": "span"
-  },
-  "a2f5131662099cad": {
-    "c": "Stock Insuficiente",
-    "i": 1,
-    "t": "span"
-  },
+  "7e8e2585df862b32": "Soporte de estante con cable",
+  "7eb3dfb79d19e9f9": "Tablones de roble (2x4x8)",
+  "98d65cb5d166f346": "Tubería de PVC (1 pulgada)",
+  "996eb92a3224309d": "Copper Wire (14 AWG)",
   "a4f4d02afd938a3e": {
     "c": "Esta es una aplicación de ejemplo creada con General Translation para demostrar funciones de internacionalización, incluyendo formato de números, divisas y fechas según la configuración regional.",
     "i": 1,
     "t": "p"
   },
+  "a7055707820bfff0": "Masonry",
+  "a917e58c68e0d858": {
+    "d": {
+      "b": {
+        "low": {
+          "c": "Poco stock",
+          "i": 2,
+          "t": "span"
+        },
+        "ok": {
+          "c": "En stock",
+          "i": 2,
+          "t": "span"
+        },
+        "out": {
+          "c": "Agotado",
+          "i": 2,
+          "t": "span"
+        }
+      },
+      "t": "b"
+    },
+    "i": 1,
+    "t": "Branch"
+  },
+  "ab98027189b2607b": "LED Panel Light",
+  "b2409d313537f6ac": "Luces de Panel LED",
   "b5aeeb7617c517e0": {
     "c": [
       {
@@ -464,41 +524,10 @@
       "t": "p"
     }
   ],
-  "c005fb88c3e7047d": {
-    "c": "En stock",
-    "i": 1,
-    "t": "span"
-  },
-  "cb974a4a428230f6": [
-    {
-      "c": [
-        {
-          "i": 2,
-          "k": "_gt_n_2",
-          "v": "n"
-        },
-        "x ",
-        {
-          "i": 3,
-          "k": "_gt_value_3",
-          "v": "v"
-        }
-      ],
-      "i": 1,
-      "t": "span"
-    },
-    {
-      "c": [
-        {
-          "i": 5,
-          "k": "_gt_n_5",
-          "v": "n"
-        },
-        " disponible(s)"
-      ],
-      "i": 4,
-      "t": "span"
-    }
-  ],
-  "db509e67965fe2e4": "Un panel de control de inventario que demuestra la internacionalización con General Translation."
+  "b78f11b18233ae2d": "Mezcla de concreto",
+  "b8bdf421004a3ba3": "Copper Wire",
+  "c02e7586dac2d2de": "Plomería",
+  "d681be43883a05eb": "Pernos de acero (M8x30)",
+  "db509e67965fe2e4": "Un panel de control de inventario que muestra la internacionalización con General Translation.",
+  "fbb0813b76ae5430": "Plumbing Assembly"
 }
